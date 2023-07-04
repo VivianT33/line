@@ -38,14 +38,12 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.message.text == "hello":
+    if event.message.text == "hello" or  event.message.text == "hello ":
         message = TextSendMessage(text='hello')
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        
         card = json.load(open('card.json','r',encoding='utf-8'))
-        message = TemplateSendMessage(card)
-        
+        message = FlexSendMessage('profile',card)
         line_bot_api.reply_message(event.reply_token, message)
 
 import os
