@@ -49,8 +49,9 @@ def handle_message(event):
 
     k =1
     while k !=0:
-        input (message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n '))
+        eval (message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n '))
         line_bot_api.reply_message(event.reply_token, message)
+        k == message 
         if k==1 :
 #food
             message = TextSendMessage(text='we are in 1')
