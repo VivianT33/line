@@ -43,37 +43,37 @@ def handle_message(event):
                     #event.message.text == "1" or "1.food" or "food" :
                 #message = TextSendMessage(text='hello')
                 #line_bot_api.reply_message(event.reply_token, message)
-    if event.message.text =="hello" or event.message.text == "hello " or event.message.text =="Hello" :
-        message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n ')
-        line_bot_api.reply_message(event.reply_token, message)
+    #event.message.text =="hello" or event.message.text == "hello " or event.message.text =="Hello" :
+    #message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n ')
+    #line_bot_api.reply_message(event.reply_token, message)
 
-        k =1
-        while k !=0:
-            message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n ')
-            line_bot_api.reply_message(event.reply_token, message)
-            if k==1 :
+    k =1
+    while k !=0:
+        input (message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n '))
+        line_bot_api.reply_message(event.reply_token, message)
+        if k==1 :
 #food
-                message = TextSendMessage(text='we are in 1')
-                line_bot_api.reply_message(event.reply_token, message)
-            if k==2 :
+            message = TextSendMessage(text='we are in 1')
+            line_bot_api.reply_message(event.reply_token, message)
+        if k==2 :
 #transportation
-                message = TextSendMessage(text='we are in 2')
-                line_bot_api.reply_message(event.reply_token, message)
-            elif k==3 :
+            message = TextSendMessage(text='we are in 2')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif k==3 :
 #cloth
-                message = TextSendMessage(text='we are in 3')
-                line_bot_api.reply_message(event.reply_token, message)
-            elif k==4 :
+            message = TextSendMessage(text='we are in 3')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif k==4 :
 #living
-                message = TextSendMessage(text='we are in 4')
-                line_bot_api.reply_message(event.reply_token, message)
-            elif k==5 :
+            message = TextSendMessage(text='we are in 4')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif k==5 :
 #log out
-                message = TextSendMessage(text='Thanks, see you next time~')
-                line_bot_api.reply_message(event.reply_token, message)
-            else:
-                message = TextSendMessage(text='error, please try again')
-                line_bot_api.reply_message(event.reply_token, message)
+            message = TextSendMessage(text='Thanks, see you next time~')
+            line_bot_api.reply_message(event.reply_token, message)
+        else:
+            message = TextSendMessage(text='error, please try again')
+            line_bot_api.reply_message(event.reply_token, message)
                 
 
     else:
