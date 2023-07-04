@@ -42,7 +42,10 @@ def handle_message(event):
         message = TextSendMessage(text='hello')
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        message = TextSendMessage(text='hello')
+        import json
+        card = open('card.json')
+        message = TemplateSendMessage(card)
+        
         line_bot_api.reply_message(event.reply_token, message)
 
 import os

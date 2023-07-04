@@ -1,0 +1,160 @@
+{
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://th.bing.com/th/id/R.ea29d50efb83ab763be9cc269bb2b387?rik=lJiZNOMWXerl8w&riu=http%3a%2f%2fmays2.weebly.com%2fuploads%2f5%2f6%2f7%2f6%2f5676424%2f5565608_orig.jpg&ehk=%2bUZb1g%2fzitEaxLFB%2fg%2f8LsQbEkHlquU8edgp18jen7M%3d&risl=&pid=ImgRaw&r=0",
+      "size": "full",
+      "aspectRatio": "20:13",
+      "aspectMode": "cover",
+      "action": {
+        "type": "uri",
+        "uri": "http://linecorp.com/"
+      }
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "北車",
+          "weight": "bold",
+          "size": "xl"
+        },
+        {
+          "type": "box",
+          "layout": "baseline",
+          "margin": "md",
+          "contents": [
+            {
+              "type": "icon",
+              "size": "sm",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+            },
+            {
+              "type": "icon",
+              "size": "sm",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+            },
+            {
+              "type": "icon",
+              "size": "sm",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+            },
+            {
+              "type": "icon",
+              "size": "sm",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+            },
+            {
+              "type": "icon",
+              "size": "sm",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+            },
+            {
+              "type": "text",
+              "text": "3.0",
+              "size": "sm",
+              "color": "#999999",
+              "margin": "md",
+              "flex": 0
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "margin": "lg",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Place",
+                  "color": "#aaaaaa",
+                  "size": "sm",
+                  "flex": 1
+                },
+                {
+                  "type": "text",
+                  "text": "忠孝西路",
+                  "wrap": true,
+                  "color": "#666666",
+                  "size": "sm",
+                  "flex": 5
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Time",
+                  "color": "#aaaaaa",
+                  "size": "sm",
+                  "flex": 1
+                },
+                {
+                  "type": "text",
+                  "text": "10:00 - 23:00",
+                  "wrap": true,
+                  "color": "#666666",
+                  "size": "sm",
+                  "flex": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "message",
+            "label": "call",
+            "text": "hello"
+          }
+        },
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "uri",
+            "label": "WEBSITE",
+            "uri": "https://www.google.com"
+          }
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "comment",
+            "uri": "http://linecorp.com/"
+          }
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [],
+          "margin": "sm"
+        }
+      ],
+      "flex": 0
+    }
+  }
