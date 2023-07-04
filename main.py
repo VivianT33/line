@@ -40,27 +40,43 @@ def callback():
 def handle_message(event):
     #change
     # event.message.text : user input
+                    #event.message.text == "1" or "1.food" or "food" :
+                #message = TextSendMessage(text='hello')
+                #line_bot_api.reply_message(event.reply_token, message)
     if event.message.text =="hello" or event.message.text == "hello " or event.message.text =="Hello" :
-        message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n')
+        message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food \n 2.transportation \n 3.cloth \n 4.living \n 5.exit \n ')
         line_bot_api.reply_message(event.reply_token, message)
 
         k =1
         while k !=0:
             if k==1 :
+#food
                 card = json.load(open('card.json','r',encoding='utf-8'))
                 message = FlexSendMessage('profile',card)
                 line_bot_api.reply_message(event.reply_token, message)
-                #event.message.text == "1" or "1.food" or "food" :
-                #message = TextSendMessage(text='hello')
-                #line_bot_api.reply_message(event.reply_token, message)
             if k==2 :
+#transportation
                 card = json.load(open('card.json','r',encoding='utf-8'))
                 message = FlexSendMessage('profile',card)
+                line_bot_api.reply_message(event.reply_token, message)
+            elif k==3 :
+#cloth
+                card = json.load(open('card.json','r',encoding='utf-8'))
+                message = FlexSendMessage('profile',card)
+                line_bot_api.reply_message(event.reply_token, message)
+            elif k==4 :
+#living
+                card = json.load(open('card.json','r',encoding='utf-8'))
+                message = FlexSendMessage('profile',card)
+                line_bot_api.reply_message(event.reply_token, message)
+            elif k==5 :
+#log out
+                message = TextSendMessage(text='Thanks, see you next time~')
                 line_bot_api.reply_message(event.reply_token, message)
             else:
-                card = json.load(open('card.json','r',encoding='utf-8'))
-                message = FlexSendMessage('profile',card)
+                message = TextSendMessage(text='error, please try again')
                 line_bot_api.reply_message(event.reply_token, message)
+                
 
     else:
         card = json.load(open('card.json','r',encoding='utf-8'))
