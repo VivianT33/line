@@ -47,11 +47,21 @@ def handle_message(event):
         k =1
         while k !=0:
             if k==1 :
-                event.message.text == "1" or "1.food" or "food" :
-                message = TextSendMessage(text='hello')
+                card = json.load(open('card.json','r',encoding='utf-8'))
+                message = FlexSendMessage('profile',card)
                 line_bot_api.reply_message(event.reply_token, message)
+                #event.message.text == "1" or "1.food" or "food" :
+                #message = TextSendMessage(text='hello')
+                #line_bot_api.reply_message(event.reply_token, message)
             if k==2 :
-                
+                card = json.load(open('card.json','r',encoding='utf-8'))
+                message = FlexSendMessage('profile',card)
+                line_bot_api.reply_message(event.reply_token, message)
+            else:
+                card = json.load(open('card.json','r',encoding='utf-8'))
+                message = FlexSendMessage('profile',card)
+                line_bot_api.reply_message(event.reply_token, message)
+
     else:
         card = json.load(open('card.json','r',encoding='utf-8'))
         message = FlexSendMessage('profile',card)
