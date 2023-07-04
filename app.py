@@ -8,12 +8,12 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+import json
+
 app = Flask(__name__)
 
 
-ALLOW_HOST = {
-    'https://d937-2401-e180-8851-bb27-5d53-bc26-204c-9c84.ngrok-free.app'
-}
+
 
 # Channel Access Token
 line_bot_api = LineBotApi('0pJNfFni77KaR1UFW39QD71g7Vk0IqUY6t5lSwTgDjEN1B+U38qz+hhOTBrOjjV+aolJMzDr2LETjGUtuRfiUM7+2vclI+F9ncWFPopH5YrxXUTAfKWHD3oks5/3PWHe8IGH6Sd4VC8ZP4x2BEKvgAdB04t89/1O/w1cDnyilFU=')
@@ -42,8 +42,8 @@ def handle_message(event):
         message = TextSendMessage(text='hello')
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        import json
-        card = open('card.json')
+        
+        card = json.load(open('card.json','r',encoding='utf-8'))
         message = TemplateSendMessage(card)
         
         line_bot_api.reply_message(event.reply_token, message)
