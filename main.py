@@ -41,7 +41,7 @@ def handle_message(event):
     #change
     # event.message.text : user input
     while event.message.text =="hello" or event.message.text == "hello " or event.message.text =="Hello":
-        message = TextSendMessage(text='你好')
+        message = TextSendMessage(text='Hello,what can I help you? \n Please enter the number of the list below \n 1.food 2.transportation \n 3.cloth \n 4.living')
         line_bot_api.reply_message(event.reply_token, message)
         if event.message.text == "hola" :
             message = TextSendMessage(text='hello')
