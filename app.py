@@ -38,8 +38,12 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text="hello")
-    line_bot_api.reply_message(event.reply_token, message)
+    if event.message.text == "hello":
+        message = TextSendMessage(text='hello')
+        line_bot_api.reply_message(event.reply_token, message)
+    else:
+        message = TextSendMessage(text='hello')
+        line_bot_api.reply_message(event.reply_token, message)
 
 import os
 if __name__ == "__main__":
