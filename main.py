@@ -40,13 +40,16 @@ def callback():
 def handle_message(event):
     #change
     # event.message.text : user input
-    if event.message.text == "hello" or  event.message.text == "hello ":
-        message = TextSendMessage(text='hello')
+    while event.message.text =="hello" or event.message.text == "hello " or event.message.text =="Hello":
+        message = TextSendMessage(text='你好')
         line_bot_api.reply_message(event.reply_token, message)
-    else:
-        card = json.load(open('card.json','r',encoding='utf-8'))
-        message = FlexSendMessage('profile',card)
-        line_bot_api.reply_message(event.reply_token, message)
+        if event.message.text == "hola" :
+            message = TextSendMessage(text='hello')
+            line_bot_api.reply_message(event.reply_token, message)
+        else:
+            card = json.load(open('card.json','r',encoding='utf-8'))
+            message = FlexSendMessage('profile',card)
+            line_bot_api.reply_message(event.reply_token, message)
 #
 
 import os
